@@ -8,8 +8,6 @@ exports.processDate = (req, res) => {
     // convert to unix and utc if using utf format or if empty string
     const unix = date.getTime()
     const utc = date.toUTCString()
-    console.log(unix)
-    console.log(utc)
 
     if(isNaN(date)) {
         res.json({ error: 'Invalid Date' })
